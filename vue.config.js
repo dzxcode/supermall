@@ -1,14 +1,19 @@
+const path = require('path')
+
 module.exports = {
   configureWebpack: {
     resolve: {
-      extensions: [],
+      extensions: ['.js', '.css', '.vue'],
       alias: {
-        assets: '@/assets',
-        common: '@/common',
-        components: '@/components',
-        network: '@/network',
-        views: '@/views'
+        assets: path.resolve(__dirname, 'src/assets'),
+        common: path.resolve(__dirname, 'src/common'),
+        components: path.resolve(__dirname, 'src/components'),
+        network: path.resolve(__dirname, 'src/network'),
+        views: path.resolve(__dirname, 'src/views')
       }
     }
+  },
+  devServer: {
+    open: true
   }
 }
