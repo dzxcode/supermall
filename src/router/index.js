@@ -30,8 +30,8 @@ const route = [
     component: Profile
   },
   {
-    path: '/',
-    redicect: '/home'
+    path: '*',
+    redirect: '/home'
   }
 ]
 
